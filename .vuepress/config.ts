@@ -24,7 +24,7 @@ export default defineUserConfig({
   theme,
   markdown:{
     importCode:{
-      handleImportPath:  (str) => 
+      handleImportPath:  (str: string) => 
         str
         .replace(/^\/examples/, path.resolve(__dirname, '../../examples'))
         .replace(/^\/src/, path.resolve(__dirname, '../../src'))

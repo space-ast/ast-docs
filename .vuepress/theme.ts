@@ -13,9 +13,11 @@ export default hopeTheme({
 
   logo: "logo.svg",
 
-  repo: "space-ast/ast",
+  repo: "https://gitcode.com/space-ast/ast-docs",
+
+  editLinkPattern: ":repo/edit/:branch/:path",
   docsBranch:"master",
-  docsDir: "docs",
+  docsDir: ".",
 
   locales: {
     "/en/": {
@@ -30,7 +32,7 @@ export default hopeTheme({
       displayFooter: true,
 
       metaLocales: {
-        editLink: "Edit this page on GitHub",
+        editLink: "Edit this page",
       },
     },
 
@@ -50,7 +52,7 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: "编辑此页",
       },
     },
   },
@@ -86,7 +88,7 @@ export default hopeTheme({
     stylize: [
       {
         matcher: "Recommended",
-        replacer: ({ tag }) => {
+        replacer: ({ tag }: { tag: string }) => {
           if (tag === "em")
             return {
               tag: "Badge",
@@ -154,7 +156,7 @@ export default hopeTheme({
     },
 
     components: {
-      components: ["Badge", "VPCard"],
+      components: ["Badge", "VPCard", "VPBanner"],
     },
 
     icon: {
