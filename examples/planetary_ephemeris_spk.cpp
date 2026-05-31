@@ -22,7 +22,6 @@ int main()
     if (err != eNoError) {
         std::cerr << "无法解析SPK星历文件: " << spkFilePath << std::endl;
         std::cerr << "错误码: " << err << std::endl;
-        return -1;
     }
 
     std::cout << "成功打开SPK星历文件" << std::endl;
@@ -105,5 +104,4 @@ int main()
 
     std::cout << "\n示例程序执行完毕" << std::endl;
 
-    return 0;
 }
