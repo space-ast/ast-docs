@@ -1,14 +1,9 @@
-/// @file      planetary_ephemeris_de.cpp
-/// @brief     JPL DE星历读取示例
-/// @author    ast团队
-/// @date      2026-05-13
-
-#include "AstCore/JplDe.hpp"
-#include "AstCore/TimePoint.hpp"
-#include "AstCore/TimeInterval.hpp"
-#include "AstCore/Vector.hpp"
-#include "AstCore/JulianDate.hpp"
-#include "AstCore/DateTime.hpp"
+#include "ast/JplDe.hpp"
+#include "ast/TimePoint.hpp"
+#include "ast/TimeInterval.hpp"
+#include "ast/Vector.hpp"
+#include "ast/JulianDate.hpp"
+#include "ast/DateTime.hpp"
 #include <iostream>
 #include <iomanip>
 #include <clocale>
@@ -47,10 +42,10 @@ int main()
     // 获取地球相对于太阳系质心的位置和速度
     Vector3d pos, vel;
     err = de.getPosVelICRF(
-        time, 
-        JplDe::eEarth, 
-        JplDe::eSSBarycenter, 
-        pos, 
+        time,
+        JplDe::eEarth,
+        JplDe::eSSBarycenter,
+        pos,
         vel
     );
 
@@ -70,10 +65,10 @@ int main()
 
     // 获取月球相对于地球的位置
     err = de.getPosVelICRF(
-        time, 
-        JplDe::eMoon, 
-        JplDe::eEarth, 
-        pos, 
+        time,
+        JplDe::eMoon,
+        JplDe::eEarth,
+        pos,
         vel
     );
 
@@ -82,10 +77,12 @@ int main()
         std::cout << "  X: " << std::setprecision(6) << pos.x() << std::endl;
         std::cout << "  Y: " << std::setprecision(6) << pos.y() << std::endl;
         std::cout << "  Z: " << std::setprecision(6) << pos.z() << std::endl;
-        
+
         // 计算地月距离
         double distance = pos.norm();
         std::cout << "地月距离: " << std::setprecision(6) << distance << " m" << std::endl;
+    } else {
+        std::cerr << "获取月球位置失败，错误码: " << err << std::endl;
     }
 
     // 获取章动角
@@ -95,8 +92,10 @@ int main()
         std::cout << "\n章动角 (rad):" << std::endl;
         std::cout << "  黄经章动: " << std::setprecision(10) << nutLong << std::endl;
         std::cout << "  倾角章动: " << std::setprecision(10) << nutObl << std::endl;
+    } else {
+        std::cerr << "获取章动角失败，错误码: " << err << std::endl;
     }
-    
+
     // 获取月球天平动相关角度
     Vector3d libration;
     err = de.getLibration(time, libration);
@@ -105,6 +104,8 @@ int main()
         std::cout << "  进动角 (omega): " << std::setprecision(10) << libration.x() << std::endl;
         std::cout << "  章动角 (i): " << std::setprecision(10) << libration.y() << std::endl;
         std::cout << "  自转角 (u): " << std::setprecision(10) << libration.z() << std::endl;
+    } else {
+        std::cerr << "获取天平动数据失败，错误码: " << err << std::endl;
     }
 
     // 关闭星历文件

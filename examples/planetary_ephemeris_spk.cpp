@@ -1,12 +1,6 @@
-/// @file      planetary_ephemeris_spk.cpp
-/// @brief     SPICE SPK星历读取示例
-/// @author    ast团队
-/// @date      2026-05-13
-
-#include "AstUtil/SPKParser.hpp"
-#include "AstCore/TimePoint.hpp"
-#include "AstCore/Vector.hpp"
-#include "AstCore/JulianDate.hpp"
+#include "ast/SPKParser.hpp"
+#include "ast/Vector.hpp"
+#include "ast/JulianDate.hpp"
 #include <iostream>
 #include <iomanip>
 #include <clocale>
@@ -23,7 +17,7 @@ int main()
 
     // 打开SPK星历文件（请替换为实际文件路径）
     std::string spkFilePath = "./data/Test/kernels/spk/de430.bsp";
-    
+
     errc_t err = spkParser.parse(spkFilePath);
     if (err != eNoError) {
         std::cerr << "无法解析SPK星历文件: " << spkFilePath << std::endl;
@@ -41,7 +35,7 @@ int main()
     const auto& descriptors = spkParser.getDescriptors();
     std::cout << "\n=== SPK段信息 ===" << std::endl;
     std::cout << "段数量: " << descriptors.size() << std::endl;
-    
+
     for (size_t i = 0; i < descriptors.size(); ++i) {
         const auto& desc = descriptors[i];
         std::cout << "\n段 " << (i + 1) << ":" << std::endl;
@@ -54,7 +48,7 @@ int main()
 
     // 使用J2000.0 TDB时刻（ET=0）作为示例时间
     double et = 0.0;  // J2000.0 TDB时刻，即2000年1月1日12:00:00 TDB
-    
+
     // 定义一些常用的NAIF天体ID
     const int SUN_ID = 10;
     const int EARTH_ID = 399;
@@ -64,7 +58,7 @@ int main()
     // 获取地球的位置和速度（相对于地月系质心）
     Vector3d pos, vel;
     err = spkParser.getPosVelNative(et, EARTH_ID, pos, vel);
-    
+
     if (err == eNoError) {
         std::cout << "\n=== J2000.0时刻地球状态(相对于地月系质心) ===" << std::endl;
         std::cout << "位置 (m):" << std::endl;
@@ -75,7 +69,7 @@ int main()
         std::cout << "  Vx: " << std::setprecision(6) << vel.x() << std::endl;
         std::cout << "  Vy: " << std::setprecision(6) << vel.y() << std::endl;
         std::cout << "  Vz: " << std::setprecision(6) << vel.z() << std::endl;
-        
+
         // 计算距离和速度大小
         double distance = pos.norm() / 1000.0;  // 转换为km
         double speed = vel.norm();              // m/s
@@ -108,7 +102,7 @@ int main()
     } else {
         std::cout << "\n未找到地球在ET=" << et << "的SPK段" << std::endl;
     }
-    
+
     std::cout << "\n示例程序执行完毕" << std::endl;
 
     return 0;
