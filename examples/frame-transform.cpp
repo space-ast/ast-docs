@@ -2,7 +2,7 @@
 #include "ast/TimePoint.hpp"
 #include "ast/Vector.hpp"
 #include "ast/Matrix.hpp"
-#include "ast/Rotation.hpp"
+
 #include <iostream>
 #include <iomanip>
 #include <clocale>
@@ -80,13 +80,13 @@ int main()
     std::cout << "    [" << matMODToTOD(2,0) << "  " << matMODToTOD(2,1) << "  " << matMODToTOD(2,2) << "]" << std::endl;
 
     // ============================================================
-    // ICRF → J2000 (参考系偏差)
+    // J2000 → ICRF 
     // ============================================================
     Vector3d rICRF;
     aJ2000ToICRF(tp, rJ2000, rICRF);
 
     double icrfJ2000Diff = (rICRF - rJ2000).norm();
-    std::cout << "\n===== ICRF ↔ J2000 (参考系偏差) =====" << std::endl;
+    std::cout << "\n===== ICRF ↔ J2000 =====" << std::endl;
     std::cout << "  r_ICRF = " << rICRF.x() << "  " << rICRF.y() << "  " << rICRF.z() << std::endl;
     std::cout << "  |r_ICRF - r_J2000| = " << std::scientific << icrfJ2000Diff << " m" << std::endl;
 
