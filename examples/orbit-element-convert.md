@@ -24,7 +24,7 @@ EquinElem ←→ ModEquinElem  ←→  CartState
 
 ## 使用示例
 
-@[code](core/orbitelement/orbit-element-convert.cpp)
+@[code](orbit-element-convert.cpp)
 
 ## 注意事项
 
