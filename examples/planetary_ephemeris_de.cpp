@@ -4,6 +4,7 @@
 #include "ast/Vector.hpp"
 #include "ast/JulianDate.hpp"
 #include "ast/DateTime.hpp"
+#include "ast/Euler.hpp"
 #include <iostream>
 #include <iomanip>
 #include <clocale>
@@ -97,13 +98,13 @@ int main()
     }
 
     // 获取月球天平动相关角度
-    Vector3d libration;
+    Euler libration;
     err = de.getLibration(time, libration);
     if (err == eNoError) {
         std::cout << "\n月球天平动相关角度 (rad):" << std::endl;
-        std::cout << "  进动角 (omega): " << std::setprecision(10) << libration.x() << std::endl;
-        std::cout << "  章动角 (i): " << std::setprecision(10) << libration.y() << std::endl;
-        std::cout << "  自转角 (u): " << std::setprecision(10) << libration.z() << std::endl;
+        std::cout << "  进动角 (omega): " << std::setprecision(10) << libration.angle1() << std::endl;
+        std::cout << "  章动角 (i): " << std::setprecision(10) << libration.angle2() << std::endl;
+        std::cout << "  自转角 (u): " << std::setprecision(10) << libration.angle3() << std::endl;
     } else {
         std::cerr << "获取天平动数据失败，错误码: " << err << std::endl;
     }
