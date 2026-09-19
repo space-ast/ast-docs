@@ -58,7 +58,7 @@ D:\SpaceAST
    - **链接器 → 常规 → 附加库目录**，添加 `D:\SpaceAST\lib`
    - **链接器 → 输入 → 附加依赖项**，添加 `AstCore.lib;AstUtil.lib;AstMath.lib`
    ::: tip
-   以上是 Release 模式的配置。如果要用 Debug 模式，先将属性页顶部的 **配置** 下拉框切换为 Debug，然后在附加依赖项中填入 `AstCoreD.lib;AstUtilD.lib;AstMathD.lib`（库名带 `D` 后缀）。
+   以上是 Release 模式的配置。如果要用 Debug 模式，先将属性页顶部的 **配置** 下拉框切换为 Debug，然后在附加依赖项中填入 `AstCore_d.lib;AstUtil_d.lib;AstMath_d.lib`（库名带 `_d` 后缀）。
    :::
 4. 将 `D:\SpaceAST\bin\` 下的所有 `.dll` 文件拷贝到输出目录。
     输出目录取决于你的项目配置，通常为 `D:\my_project\x64\Release\` 或 `D:\my_project\x64\Debug\`。
@@ -152,9 +152,26 @@ xmake run hello_ast
 
 ## Linux 下使用
 
+::: warning 系统要求
+预编译二进制包（`SpaceAST-<版本>-linux-<架构>.zip`）在 manylinux_2_28（AlmaLinux 8，glibc 2.28）
+容器里构建，对系统有两项要求：
+
+- **glibc ≥ 2.28**：即 RHEL / Rocky / AlmaLinux 8+、Ubuntu 20.04+、Debian 10+、SLES 15 SP2+
+- **libstdc++ 较新**：约 GCC 11 及以上附带的版本。构建镜像用的是较新的 gcc-toolset，
+  所以 RHEL 8（libstdc++ 只到 GLIBCXX_3.4.25）这类 glibc 够新但 libstdc++ 偏旧的系统仍然不够用。
+  每次 CI 的「ABI 门槛校验」会把产物实际要求的最高 GLIBC / GLIBCXX 版本打印出来。
+
+发行版太老或 libstdc++ 偏旧时，改用自安装源码包 `SpaceAST-<版本>-linux-any.gz.run`：
+源码和构建脚本一起打包，在你的机器上现场编译，只依赖本地工具链，不受上述限制。
+
+```bash
+sh SpaceAST-v0.3.0-linux-any.gz.run --prefix=$HOME/.local
+```
+:::
+
 ### 1. 解压
 
-将下载的 `tar.gz` 解压到任意目录（如 `/opt/SpaceAST`），以下示例都假设解压到 `/opt/SpaceAST`，目录结构如下：
+将下载的 `zip` 解压到任意目录（如 `/opt/SpaceAST`），以下示例都假设解压到 `/opt/SpaceAST`，目录结构如下：
 
 ```
 /opt/SpaceAST/
