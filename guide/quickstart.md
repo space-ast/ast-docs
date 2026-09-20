@@ -154,13 +154,21 @@ xmake run hello_ast
 
 ::: warning 系统要求
 预编译二进制包（`SpaceAST-<版本>-linux-<架构>.zip`）在 manylinux_2_28（AlmaLinux 8）容器里构建。
-实测要求：
+对系统的最低要求：
 
-- **glibc ≥ 2.28** —— 即 RHEL / Rocky / AlmaLinux 8+、Ubuntu 20.04+、Debian 10+、SLES 15 SP2+
-- **libstdc++ ≥ GLIBCXX_3.4.22**（GCC 6.1 起）—— 上面这些系统自带的版本都满足，通常不是瓶颈
+- **glibc ≥ 2.23** —— 即 Ubuntu 16.04+、Debian 9+、RHEL / Rocky / AlmaLinux 8+、SLES 15 SP2+
+- **libstdc++ ≥ GLIBCXX_3.4.21**（GCC 5.1 起）—— 上述系统自带的版本都满足
 
-约束实际上由 glibc 决定。这两项每次 CI 都会实测并卡住（GLIBC ≤ 2.28），具体数字见
-构建日志里「ABI 门槛校验」的输出。
+这一组合覆盖国产化系统里的**银河麒麟 V4**（基于 Ubuntu 16.04）。麒麟 V10、统信 UOS 20
+的要求更低（glibc 2.28），自然也在支持范围内。
+
+约束由 glibc 决定。这两项每次 CI 都会实测并硬卡住，具体数字见构建日志里
+「ABI 门槛校验」的输出——它是卡死的断言，不是"仅供参考"的提示。
+
+**GUI 模块另有限制**：`AstUiCore`、`AstChart` 等基于 Qt 5.15 构建，要求目标系统的
+**Qt ≥ 5.15**。而银河麒麟 V4 只有 Qt 5.5.1，且发布包里不带 Qt 的 `.so`，所以**这些模块
+在麒麟 V4 上无法加载**。不依赖 Qt 的核心模块（`AstCore`、`AstMath`、`AstUtil`、`AstSim`、
+`AstOpt`、`AstLoader`、`AstScript` 等）不受影响，正常使用。
 
 发行版更老时（如 CentOS 7 的 glibc 2.17），改用自安装源码包
 `SpaceAST-<版本>-linux-any.gz.run`：源码和构建脚本一起打包，在你的机器上现场编译，
