@@ -87,6 +87,3 @@ The module supports transformations between the following coordinate systems:
 - Some transformation functions provide both IAU1980 and JPL DE implementations, which can be selected via `aNutationMethodSet`
 - More precise model selection may be required for long time span transformations
 
-## API Reference
-
-@[code](/src/AstCore/Coordinate/FrameTransform.hpp)

@@ -88,6 +88,5 @@ Time模块提供了全面的时间处理功能，包括日期、时间、日期�
 @[code](/src/AstCore/Time/DateTime.hpp)
 @[code](/src/AstCore/Time/JulianDate.hpp)
 @[code](/src/AstCore/Time/ModJulianDate.hpp)
-@[code](/src/AstCore/Time/DayNumber.hpp)
 @[code](/src/AstCore/Time/Duration.hpp)
 @[code](/src/AstCore/Time/TimeSystem.hpp)

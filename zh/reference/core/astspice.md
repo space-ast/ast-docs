@@ -260,25 +260,25 @@ src/AstSPICE/
 
 使用axisar函数根据旋转轴和角度计算旋转矩阵：
 
-@[code](/examples/core/astspice/axisar_rotation.cpp)
+@[code](/examples/core/spice/axisar_rotation.cpp)
 
 ### 示例2：坐标转换 - latrec/radrec
 
 球坐标（半径、经度、纬度）和直角坐标的相互转换：
 
-@[code](/examples/core/astspice/coordinate_convert.cpp)
+@[code](/examples/core/spice/coordinate_convert.cpp)
 
 ### 示例3：矩阵/欧拉角/四元数转换
 
 欧拉角、旋转矩阵和四元数之间的相互转换：
 
-@[code](/examples/core/astspice/matrix_euler_quat.cpp)
+@[code](/examples/core/spice/matrix_euler_quat.cpp)
 
 ### 示例4：向量旋转与矩阵乘法
 
 使用vrotv函数绕指定轴旋转向量，以及使用mxm进行矩阵乘法：
 
-@[code](/examples/core/astspice/vector_rotation.cpp)
+@[code](/examples/core/spice/vector_rotation.cpp)
 
 ## 注意事项
 

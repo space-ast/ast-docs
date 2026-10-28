@@ -87,6 +87,3 @@
 - 部分转换函数提供了IAU1980和JPL DE两种实现，可通过`aNutationMethodSet`选择
 - 长时间跨度的转换可能需要更精确的模型选择
 
-## API参考
-
-@[code](/src/AstCore/Coordinate/FrameTransform.hpp)
