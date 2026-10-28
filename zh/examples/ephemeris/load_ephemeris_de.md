@@ -25,7 +25,7 @@ AST_USING_NAMESPACE     // 引入 SpaceAST 的命名空间
 
 ## 创建 JplDe 实例并加载星历文件
 
-调用 `open()` 方法，输入星历文件路径，并返回错误码
+调用 `open` 方法，输入星历文件路径，并返回错误码
 
 ```cpp title="load_ephemeris_de.cpp" indent
 
@@ -112,7 +112,7 @@ if (err != eNoError) {
 
 ## 关闭星历文件
 
-`JplDe` 类在析构时会自动关闭已加载的星历文件，也可以调用 `close` 方法显式关闭已加载的星历文件
+`JplDe` 类在析构时会自动关闭已加载的星历文件，也可以调用 `close` 方法显式关闭已加载的星历文件。
 
 ```cpp title="load_ephemeris_de.cpp" indent
 de.close();
