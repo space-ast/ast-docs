@@ -32,7 +32,12 @@ Time模块提供了全面的时间处理功能，包括日期、时间、日期�
    - 儒略日的简化形式
    - 基于JulianDate类，提供更简洁的表示方式
 
-6. **时长类型**
+6. **DayNumber (日数)**
+   - 以天为单位的数值表示（如相对某历元的天数、年积日等）
+   - 与JulianDate相同的"整数天 + 小数秒"高精度表示方式
+   - 支持基本构造、取值以及加减运算
+
+7. **时长类型**
    - **ShortDuration**: 短时长，使用double表示秒数
    - **LongDuration**: 长时长，使用整数秒和小数秒分离表示
    - **DaySecDuration**: 整数天 + 小数秒时长，适合长时间跨度表示
@@ -83,5 +88,6 @@ Time模块提供了全面的时间处理功能，包括日期、时间、日期�
 @[code](/src/AstCore/Time/DateTime.hpp)
 @[code](/src/AstCore/Time/JulianDate.hpp)
 @[code](/src/AstCore/Time/ModJulianDate.hpp)
+@[code](/src/AstCore/Time/DayNumber.hpp)
 @[code](/src/AstCore/Time/Duration.hpp)
 @[code](/src/AstCore/Time/TimeSystem.hpp)

@@ -4,7 +4,7 @@
 
 ## Module Overview
 
-The OrbitElement module provides conversion functions between various orbit elements (Cartesian coordinates, classical orbit elements, modified orbit elements, equinoctial elements, and modified equinoctial elements). It is a fundamental component for astrodynamics and space dynamics calculations.
+The OrbitElement module provides conversion functions between various orbit elements (Cartesian coordinates, classical orbit elements, modified orbit elements, equinoctial elements, modified equinoctial elements, and spherical elements). It is a fundamental component for astrodynamics and space dynamics calculations.
 
 ## Core Concepts
 
@@ -48,6 +48,14 @@ The module defines the following main types of orbit elements:
    - k = tan(i/2)sin(raan)
    - L = raan + argper + trueA
 
+6. **Spherical Elements (SphericalElem)**
+   - Right ascension (ra): measured counterclockwise from the x axis of the reference frame, range [0, 2π)
+   - Declination (dec): measured from the equatorial plane, range [-π/2, π/2]
+   - Radius (r) = |pos|
+   - Flight path angle (fpa): angle between the velocity vector and the local horizontal, positive upward
+   - Flight path azimuth (azi): measured from local north toward east
+   - Velocity magnitude (v) = |vel|
+
 ### Key Constants and Units
 
 - Position unit: meter (m)
@@ -83,6 +91,7 @@ The module defines the following main types of orbit elements:
 - Some conversion functions return error codes, please handle error cases appropriately
 - Zero eccentricity orbits (circular orbits) may require special handling in some conversions
 - Modified equinoctial elements may have singularity issues when the orbit inclination is close to 180 degrees
+- Spherical elements are singular at the poles (|declination| = 90°): the forward conversion takes the right ascension as 0 and still round-trips exactly; with zero velocity the flight path angle and azimuth are undefined and the forward conversion returns an error
 
 ## API Reference
 

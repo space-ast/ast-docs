@@ -51,7 +51,7 @@ SOFA模块实现了多种IAU天文标准：
 
 - `aGMST_IAU1982`：计算格林尼治平恒星时
 - `aGAST_IAU1994`：计算格林尼治视恒星时
-- `aEquationOfEquinoxes_IAU1994`：计算赤经章动
+- `aEquationOfEquinoxes_IAU1994`：计算分点差(真春分点和平春分点之间的时角差)
 
 ### 5. 地球自转计算
 
