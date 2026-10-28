@@ -9,12 +9,16 @@ export default defineUserConfig({
   lang:"zh-CN",
 
   locales: {
+    "/": {
+      lang: "zh-CN",
+      title: "🛰️航天仿真算法库文档",
+    },
     "/en/": {
       lang: "en-US",
       title: "🛰️Aerospace Simulation Algorithm",
       // description: "docs for ast project",
     },
-    "/": {
+    "/zh/": {
       lang: "zh-CN",
       title: "🛰️航天仿真算法库文档",
       // description: "SpaceAST 项目的文档主页",

@@ -155,6 +155,12 @@ export default hopeTheme({
       indexContent: true,
     },
 
+    redirect: {
+      config: {
+        "/": "/zh/",
+      },
+    },
+
     components: {
       components: ["Badge", "VPCard", "VPBanner"],
     },

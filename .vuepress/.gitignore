@@ -2,3 +2,4 @@
 .temp/
 dist/
 public/api/
+config.ts.*.mjs
