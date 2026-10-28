@@ -1,4 +1,4 @@
-﻿// This file is the full code from en/examples/ephemeris/load_ephemeris_de.md
+// Full source code for en/examples/ephemeris/load_ephemeris_de.md
 
 #include "ast/JplDe.hpp"
 #include "ast/TimePoint.hpp"

@@ -1,4 +1,4 @@
-﻿// This file is the full code from en/examples/ephemeris/load_ephemeris_spk.md
+// Full source code for en/examples/ephemeris/load_ephemeris_spk.md
 
 #include "ast/JplSpk.hpp"
 #include "ast/TimePoint.hpp"
