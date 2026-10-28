@@ -31,7 +31,7 @@ features:
     icon: compass
     link: /en/reference/math/attitude.html
   - title: Modular shared libraries
-    details: AstCore, AstMath and AstUtil can be linked independently with clear dependencies.
+    details: core, math and util can be linked independently with clear dependencies.
     icon: cubes
     link: /en/reference/
   - title: Cross-platform builds

@@ -31,7 +31,7 @@ features:
     icon: compass
     link: /zh/reference/math/attitude.html
   - title: 模块化共享库
-    details: AstCore、AstMath、AstUtil 等独立模块按需链接，依赖关系清晰。
+    details: core、math、util 等独立模块按需链接，依赖关系清晰。
     icon: cubes
     link: /zh/reference/
   - title: 跨平台构建
