@@ -9,6 +9,11 @@ export default defineUserConfig({
   lang:"zh-CN",
 
   locales: {
+    // 根 locale 用于让 vuepress-theme-hope 生成 /en、/zh 之外页面（如 404.html）的主题数据
+    // 客户端会将其从站点 locale 列表中移除，避免语言下拉菜单重复显示。
+    "/": {
+      lang: "zh-CN"
+    },
     "/en/": {
       lang: "en-US",
       title: "🛰️Aerospace Simulation Algorithm",
@@ -16,7 +21,7 @@ export default defineUserConfig({
     },
     "/zh/": {
       lang: "zh-CN",
-      title: "🛰️航天仿真算法库文档",
+      title: "🛰️航天仿真算法库",
       // description: "SpaceAST 项目的文档主页",
     },
   },
