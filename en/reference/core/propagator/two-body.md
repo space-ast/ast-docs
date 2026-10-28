@@ -1,7 +1,5 @@
 # Two-Body Propagator
 
-*Note: This document is AI-translated.*
-
 ## Overview
 
 The two-body propagator provides orbit propagation functionality for ideal two-body problems based on the analytical solution of Kepler's equation. This method offers high computational efficiency and is suitable for fast orbit prediction scenarios where high precision is not required.

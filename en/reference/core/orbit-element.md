@@ -1,7 +1,5 @@
 # Orbit Elements Definition and Conversion
 
-*Note: This document is AI-translated. Please refer to the source code for specific APIs and behaviors.*
-
 ## Module Overview
 
 The OrbitElement module provides conversion functions between various orbit elements (Cartesian coordinates, classical orbit elements, modified orbit elements, equinoctial elements, modified equinoctial elements, and spherical elements). It is a fundamental component for astrodynamics and space dynamics calculations.

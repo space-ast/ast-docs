@@ -1,7 +1,5 @@
 # Orbit Parameter Calculation
 
-*Note: This document is AI-translated. Please refer to the source code for specific APIs and behaviors.*
-
 ## Module Overview
 
 The OrbitParam module provides conversion functions between various orbit parameters, supporting conversions between perigee/apogee altitude/radius, period, mean angular velocity, eccentricity, and conversions between anomalies (true anomaly, eccentric anomaly, mean anomaly).

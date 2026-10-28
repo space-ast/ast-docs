@@ -1,7 +1,5 @@
 # Frame Transform Module
 
-*Note: This document is AI-translated. For specific APIs and behaviors, please refer to the source code.*
-
 ## Module Overview
 
 The Frame Transform module provides conversion functionality between various coordinate systems commonly used in astrodynamics and aerospace dynamics. This module supports precise transformations between inertial frames, fixed frames, and various intermediate reference frames, providing foundational support for orbit calculations, attitude control, and other applications.

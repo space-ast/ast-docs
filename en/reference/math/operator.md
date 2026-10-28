@@ -1,7 +1,5 @@
 # Mathematical Operations
 
-*Note: This document is AI-translated. Please refer to the source code for specific APIs and behaviors.*
-
 ## Overview
 
 `MathOperator.hpp` is the mathematical operation tool module in the ast project, providing a series of general vector and matrix operation functions.

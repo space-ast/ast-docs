@@ -1,7 +1,5 @@
 # J2 Analytical Propagator
 
-*Note: This document is AI-translated.*
-
 ## Overview
 
 The J2 analytical propagator provides orbit propagation considering Earth's oblateness J2 term, offering higher precision orbit prediction than the two-body propagator. This method maintains high computational efficiency while accounting for the main perturbation effects of Earth's non-spherical gravitational field.

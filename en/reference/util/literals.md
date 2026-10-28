@@ -1,7 +1,5 @@
 # Custom Literals Support
 
-*Note: This document is AI-translated. Please refer to the source code for specific APIs and behaviors.*
-
 ## Overview
 
 `Literals.hpp` is the custom literals support module in the ast project, providing a series of custom literal operators for unit conversion, making unit conversions in code more intuitive and readable. All conversions are based on constants defined in `Constants.h`.

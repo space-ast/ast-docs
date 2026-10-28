@@ -1,7 +1,5 @@
 # HPOP High Precision Orbit Propagator
 
-*Note: This document is AI-translated.*
-
 ## Overview
 
 HPOP (High Precision Orbit Propagator) is a high-precision orbit propagation module based on numerical integration methods. It employs a modular design philosophy inspired by Simulink simulation concepts, allowing flexible configuration of force models and numerical integrators to meet various precision requirements.

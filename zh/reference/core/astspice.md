@@ -1,7 +1,5 @@
 # AstSPICE模块
 
-*说明：本文档旨在帮助理解模块功能，具体API和行为请查阅源代码。*
-
 ## 模块概述
 
 AstSPICE模块提供了与NASA SPICE（Spacecraft Planet Instrument C-matrix Events）工具包接口兼容的函数封装。SPICE是航天任务中广泛使用的工具包，用于计算星历、坐标系变换、行星状态等航天动力学相关参数。AstSPICE模块将这些功能以现代C++风格封装，便于在C++项目中集成使用。

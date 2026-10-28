@@ -1,7 +1,5 @@
 # Orbit Propagator Module
 
-*Note: This document is AI-translated. For specific API and behavior, please refer to the source code.*
-
 ## Module Overview
 
 The orbit propagator module provides various orbit propagation algorithms, ranging from simple two-body problems to high-precision numerical integration methods. This module supports orbit prediction requirements with different accuracy and computational efficiency needs.

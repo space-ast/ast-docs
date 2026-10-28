@@ -1,7 +1,5 @@
 # J4 Analytical Propagator
 
-*Note: This document is AI-translated.*
-
 ## Overview
 
 The J4 analytical propagator provides orbit propagation considering Earth's J2 and J4 oblateness terms, offering higher precision orbit prediction than the J2 propagator. This method maintains high computational efficiency while accounting for more detailed Earth non-spherical gravitational field effects.

@@ -1,7 +1,5 @@
 # Attitude
 
-*Note: This document is AI-translated. Please refer to the source code for specific APIs and behaviors.*
-
 ## Overview
 
 The Attitude module provides complete attitude representation and conversion functionality, supporting three main attitude representation methods: quaternions, Euler angles, and rotation matrices, with conversions between them.
