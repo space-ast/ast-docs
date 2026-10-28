@@ -1,2 +1,6 @@
 
 node_modules/
+
+# merge-code.mjs 生成的站点镜像（源码在 md 同级）
+.vuepress/public/zh/examples/
+.vuepress/public/en/examples/

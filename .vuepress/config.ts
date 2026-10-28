@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from 'vuepress/utils'
 import theme from "./theme.js";
+import { mergeCodeSnippets } from "../scripts/merge-code.mjs";
 
 const __dirname = getDirname(import.meta.url)
 
@@ -27,6 +28,12 @@ export default defineUserConfig({
   },
 
   theme,
+
+  // 把 md 中带 title="xxx.cpp" 的代码片段合并成完整源文件
+  onPrepared() {
+    mergeCodeSnippets();
+  },
+
   markdown:{
     importCode:{
       handleImportPath:  (str: string) => 

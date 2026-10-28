@@ -1,7 +1,5 @@
 # Time Module
 
-*Note: This document is AI-translated. For specific APIs and behaviors, please refer to the source code.*
-
 ## Module Overview
 
 The Time module provides comprehensive time handling functionality, including date, time, date-time, Julian Date, Modified Julian Date, duration, and time system conversions. This module is a fundamental component for astrodynamics and aerospace dynamics calculations, supporting conversions and operations between various time representations.
@@ -32,8 +30,13 @@ The module defines the following main time representation types:
    - Simplified form of Julian Date
    - Based on JulianDate class, providing a more concise representation
 
-6. **Duration Types**
-   - **ShorDuration**: Short duration, using double to represent seconds
+6. **DayNumber**
+   - Numerical representation in days (such as days relative to an epoch, or day of year)
+   - Uses the same high-precision "integer days + fractional seconds" representation as JulianDate
+   - Supports basic construction, value access, and addition and subtraction
+
+7. **Duration Types**
+   - **ShortDuration**: Short duration, using double to represent seconds
    - **LongDuration**: Long duration, using separate integer and fractional seconds
    - **DaySecDuration**: Integer days + fractional seconds, suitable for long time spans
 

@@ -10,7 +10,8 @@
     "docs:build": "vuepress-vite build .",
     "docs:clean-dev": "vuepress-vite dev . --clean-cache",
     "docs:dev": "vuepress-vite dev .",
-    "docs:update-package": "npx vp-update"
+    "docs:update-package": "npx vp-update",
+    "merge-code": "node scripts/merge-code.mjs"
   },
   "devDependencies": {
     "@mathjax/src": "^4.1.0",
