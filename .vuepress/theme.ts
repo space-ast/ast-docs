@@ -13,6 +13,8 @@ export default hopeTheme({
 
   logo: "logo.svg",
 
+  favicon: "/favicon.ico",
+
   repo: "https://gitcode.com/space-ast/ast-docs",
 
   editLinkPattern: ":repo/edit/:branch/:path",

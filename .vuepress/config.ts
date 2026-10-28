@@ -16,12 +16,12 @@ export default defineUserConfig({
     },
     "/en/": {
       lang: "en-US",
-      title: "🛰️Aerospace Simulation Algorithm",
+      title: "Aerospace Simulation Algorithm",
       // description: "docs for ast project",
     },
     "/zh/": {
       lang: "zh-CN",
-      title: "🛰️航天仿真算法库",
+      title: "航天仿真算法库",
       // description: "SpaceAST 项目的文档主页",
     },
   },
