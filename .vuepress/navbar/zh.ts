@@ -4,10 +4,10 @@ export const zhNavbar = navbar([
   {
     icon: "signs-post",
     text: "使用指南",
-    link: "/guide/quickstart.md",
+    link: "/zh/guide/quickstart.html",
   },
-  "/technical/",
-  "/examples/",
+  "/zh/technical/",
+  "/zh/examples/",
   {
     icon: "gears",
     text: "API 手册",

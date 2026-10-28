@@ -1,4 +1,4 @@
-// hello_ast.cpp
+// quickstart.cpp
 #include "ast/DateTime.hpp"
 #include "ast/JulianDate.hpp"
 #include <iostream>
