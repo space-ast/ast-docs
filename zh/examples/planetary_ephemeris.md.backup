@@ -19,7 +19,7 @@ SpaceAST库提供了两种方式读取行星星历数据：
 
 ### 使用示例
 
-@[code](planetary_ephemeris_de.cpp)
+<!--@[code](planetary_ephemeris_de.cpp) -->
 
 ### 支持的天体
 
@@ -51,7 +51,7 @@ SpaceAST库提供了两种方式读取行星星历数据：
 
 ### 使用示例
 
-@[code](planetary_ephemeris_spk.cpp)
+<!--@[code](planetary_ephemeris_spk.cpp) -->
 
 ### NAIF天体ID
 

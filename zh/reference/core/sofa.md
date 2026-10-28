@@ -61,15 +61,15 @@ SOFA模块实现了多种IAU天文标准：
 
 ### 1. 岁差角计算
 
-@[code](/examples/core/sofa/precession.cpp)
+<!--@[code](/examples/core/sofa/precession.cpp) -->
 
 ### 2. 章动角计算
 
-@[code](/examples/core/sofa/nutation.cpp)
+<!--@[code](/examples/core/sofa/nutation.cpp) -->
 
 ### 3. 格林尼治恒星时计算
 
-@[code](/examples/core/sofa/gmst_gast.cpp)
+<!--@[code](/examples/core/sofa/gmst_gast.cpp) -->
 
 
 ## 注意事项
@@ -111,4 +111,4 @@ SOFA模块实现了多种IAU天文标准：
 
 ## API参考
 
-@[code](/src/AstCore/Coordinate/IERS/SOFA.hpp)
+<!--@[code](/src/AstCore/Coordinate/IERS/SOFA.hpp) -->

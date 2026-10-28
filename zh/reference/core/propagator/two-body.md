@@ -38,11 +38,11 @@ AST_CORE_CAPI errc_t aTwoBodyProp(double duration, double gm, Vector3d& r, Vecto
 
 ### 1. 基本二体传播
 
-@[code](/examples/propagator/two_body/twobody_basic_propagation.cpp)
+<!--@[code](/examples/propagator/two_body/twobody_basic_propagation.cpp) -->
 
 ### 2. 地球轨道传播
 
-@[code](/examples/propagator/two_body/twobody_earth_orbit.cpp)
+<!--@[code](/examples/propagator/two_body/twobody_earth_orbit.cpp) -->
 
 ## 精度与限制
 
@@ -67,4 +67,4 @@ AST_CORE_CAPI errc_t aTwoBodyProp(double duration, double gm, Vector3d& r, Vecto
 
 ## API参考
 
-@[code](/src/AstCore/Propagator/TwoBody.hpp)
+<!--@[code](/src/AstCore/Propagator/TwoBody.hpp) -->

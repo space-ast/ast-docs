@@ -48,19 +48,19 @@ Attitude 模块提供了完整的姿态表示和转换功能，支持四元数�
 
 ### 示例1：基本转换
 
-@[code](/examples/math/attitude/basic_convert.cpp)
+<!--@[code](/examples/math/attitude/basic_convert.cpp) -->
 
 ### 示例2：欧拉角使用
 
-@[code](/examples/math/attitude/euler.cpp)
+<!--@[code](/examples/math/attitude/euler.cpp) -->
 
 ### 示例3：四元数操作
 
-@[code](/examples/math/attitude/quaternion.cpp)
+<!--@[code](/examples/math/attitude/quaternion.cpp) -->
 
 ### 示例4：完整转换流程
 
-@[code](/examples/math/attitude/example_convert.cpp)
+<!--@[code](/examples/math/attitude/example_convert.cpp) -->
 
 
 ## 角度范围说明
@@ -87,4 +87,4 @@ Attitude 模块提供了完整的姿态表示和转换功能，支持四元数�
 
 ## API参考
 
-@[code](/src/AstMath/Attitude/AttitudeConvert.hpp)
+<!--@[code](/src/AstMath/Attitude/AttitudeConvert.hpp) -->

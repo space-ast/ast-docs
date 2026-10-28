@@ -120,19 +120,19 @@ integrator.setMaxStep(1.0);     // 设置最大步长
 
 演示如何使用不同的ODE积分器求解简单的常微分方程，包括指数衰减方程和简谐振动方程。
 
-@[code](/examples/math/ode/basic_integration.cpp)
+<!--@[code](/examples/math/ode/basic_integration.cpp) -->
 
 #### 示例2：变步长积分器自适应控制
 
 展示变步长积分器的自适应步长控制和误差估计功能，包括不同容差设置的影响。
 
-@[code](/examples/math/ode/adaptive_step.cpp)
+<!--@[code](/examples/math/ode/adaptive_step.cpp) -->
 
 #### 示例3：性能比较分析
 
 比较不同积分器在精度和计算效率方面的表现，包括定步长和变步长积分器的对比。
 
-@[code](/examples/math/ode/performance_comparison.cpp)
+<!--@[code](/examples/math/ode/performance_comparison.cpp) -->
 
 ## 性能比较
 

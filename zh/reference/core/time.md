@@ -53,15 +53,15 @@ Time模块提供了全面的时间处理功能，包括日期、时间、日期�
 
 ### 1. 日期时间创建与规范化
 
-@[code](/examples/core/time/date_time_normalize.cpp)
+<!--@[code](/examples/core/time/date_time_normalize.cpp) -->
 
 ### 2. 儒略日转换
 
-@[code](/examples/core/time/julian_date_convert.cpp)
+<!--@[code](/examples/core/time/julian_date_convert.cpp) -->
 
 ### 3. 时间系统转换
 
-@[code](/examples/core/time/time_system_convert.cpp)
+<!--@[code](/examples/core/time/time_system_convert.cpp) -->
 
 
 ## 依赖关系
@@ -81,10 +81,10 @@ Time模块提供了全面的时间处理功能，包括日期、时间、日期�
 
 ## API参考
 
-@[code](/src/AstCore/Time/Date.hpp)
-@[code](/src/AstCore/Time/Time.hpp)
-@[code](/src/AstCore/Time/DateTime.hpp)
-@[code](/src/AstCore/Time/JulianDate.hpp)
-@[code](/src/AstCore/Time/ModJulianDate.hpp)
-@[code](/src/AstCore/Time/Duration.hpp)
-@[code](/src/AstCore/Time/TimeSystem.hpp)
+<!--@[code](/src/AstCore/Time/Date.hpp) -->
+<!--@[code](/src/AstCore/Time/Time.hpp) -->
+<!--@[code](/src/AstCore/Time/DateTime.hpp) -->
+<!--@[code](/src/AstCore/Time/JulianDate.hpp) -->
+<!--@[code](/src/AstCore/Time/ModJulianDate.hpp) -->
+<!--@[code](/src/AstCore/Time/Duration.hpp) -->
+<!--@[code](/src/AstCore/Time/TimeSystem.hpp) -->

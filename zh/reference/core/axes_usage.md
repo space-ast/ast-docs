@@ -39,7 +39,7 @@ Axes (基类)
 
 ### 1. 获取轴系实例
 
-@[code](/examples/core/axes/get_axes_instance.cpp)
+<!--@[code](/examples/core/axes/get_axes_instance.cpp) -->
 
 #### 1.1 全局单例轴系
 
@@ -91,7 +91,7 @@ auto bodyTOD = AxesBodyTOD::NewShared(earth);
 
 ### 2. 轴系变换计算
 
-@[code](/examples/core/axes/get_rotation_transform.cpp)
+<!--@[code](/examples/core/axes/get_rotation_transform.cpp) -->
 
 #### 2.1 获取旋转变换
 
@@ -106,7 +106,7 @@ source->getTransformTo(target, timePoint, rotation);
 
 #### 2.2 获取转换矩阵
 
-@[code](/examples/core/axes/get_transform_matrix.cpp)
+<!--@[code](/examples/core/axes/get_transform_matrix.cpp) -->
 
 ```cpp
 // 直接获取转换矩阵
@@ -116,7 +116,7 @@ errc_t err = aAxesTransform(source, target, timePoint, matrix);
 
 #### 2.3 获取运动学旋转变换
 
-@[code](/examples/core/axes/get_kinematic_rotation.cpp)
+<!--@[code](/examples/core/axes/get_kinematic_rotation.cpp) -->
 
 ```cpp
 // 获取包含角速度的运动学旋转
@@ -136,7 +136,7 @@ Vector3d angVel = kinRot.getRotationRate();
 
 #### 3.1 创建冻结轴系
 
-@[code](/examples/core/axes/create_frozen_axes.cpp)
+<!--@[code](/examples/core/axes/create_frozen_axes.cpp) -->
 
 ```cpp
 // 创建冻结轴系（使用智能指针避免内存泄漏）
@@ -146,7 +146,7 @@ auto frozenAxes = AxesFrozen::MakeShared(ecf, freezeTime, aAxesICRF());
 
 #### 3.2 使用冻结轴系
 
-@[code](/examples/core/axes/use_frozen_axes.cpp)
+<!--@[code](/examples/core/axes/use_frozen_axes.cpp) -->
 
 ```cpp
 // 任何时刻获取变换都返回冻结时刻的值
@@ -158,7 +158,7 @@ frozenAxes->getTransformTo(aAxesICRF(), otherTime, rotation2);   // 其他时刻
 
 ### 4. 轴系层级操作
 
-@[code](/examples/core/axes/axes_hierarchy.cpp)
+<!--@[code](/examples/core/axes/axes_hierarchy.cpp) -->
 
 #### 4.1 获取父轴系
 

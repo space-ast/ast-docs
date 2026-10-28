@@ -46,22 +46,22 @@ OrbitParam模块提供各种轨道参数之间的转换函数，支持近地点/
 
 以下示例展示如何在近地点/远地点半径和高度之间进行转换：
 
-@[code](/examples/core/orbitparam/radius_and_height.cpp)
+<!--@[code](/examples/core/orbitparam/radius_and_height.cpp) -->
 
 
 ### 2. 轨道周期与角速度计算
 
 以下示例展示如何计算轨道周期和平均角速度：
 
-@[code](/examples/core/orbitparam/period_and_angvel.cpp)
+<!--@[code](/examples/core/orbitparam/period_and_angvel.cpp) -->
 
 ### 3. 近点角转换
 
-@[code](/examples/core/orbitparam/anomaly_convert.cpp)
+<!--@[code](/examples/core/orbitparam/anomaly_convert.cpp) -->
 
 ### 4. 完整轨道分析
 
-@[code](/examples/core/orbitparam/orbitparam_example.cpp)
+<!--@[code](/examples/core/orbitparam/orbitparam_example.cpp) -->
 
 
 ## 依赖关系
@@ -81,4 +81,4 @@ OrbitParam模块提供各种轨道参数之间的转换函数，支持近地点/
 
 ## API参考
 
-@[code](/src/AstCore/Orbit/OrbitParam.hpp)
+<!--@[code](/src/AstCore/Orbit/OrbitParam.hpp) -->

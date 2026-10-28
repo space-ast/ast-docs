@@ -46,7 +46,7 @@ D:\SpaceAST
 
 创建一个新目录作为项目根目录（如 `D:\my_project`），与 `SpaceAST` 平级，并在其中新建一个 `hello_ast.cpp` 文件，内容如下：
 
-@[code](quickstart.cpp)
+<!--@[code](quickstart.cpp) -->
 
 ### 3. 构建
 
@@ -170,7 +170,7 @@ xmake run hello_ast
 
 创建项目目录（如 `~/my_project`），并在其中新建一个 `hello_ast.cpp` 文件，内容如下：
 
-@[code](quickstart.cpp)
+<!--@[code](quickstart.cpp) -->
 
 ### 3. 构建
 

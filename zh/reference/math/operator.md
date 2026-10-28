@@ -33,15 +33,15 @@
 
 ### 基本向量运算
 
-@[code](/examples/util/operator/vector_op_basic.cpp)
+<!--@[code](/examples/util/operator/vector_op_basic.cpp) -->
 
 ### 算术运算
 
-@[code](/examples/util/operator/vector_op_arithmetic.cpp)
+<!--@[code](/examples/util/operator/vector_op_arithmetic.cpp) -->
 
 ### 矩阵运算
 
-@[code](/examples/util/operator/matrix_op_basic.cpp)
+<!--@[code](/examples/util/operator/matrix_op_basic.cpp) -->
 
 ## 设计说明
 

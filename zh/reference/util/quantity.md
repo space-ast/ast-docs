@@ -28,7 +28,7 @@ ast库定义了以下基本量纲：
 
 量纲支持乘法、除法和幂运算，用于创建导出量纲：
 
-@[code](/examples/util/quantity/dimension_op.cpp)
+<!--@[code](/examples/util/quantity/dimension_op.cpp) -->
 
 ### 单位（Unit）
 
@@ -51,7 +51,7 @@ ast库提供了丰富的预定义单位，包括：
 
 单位可以进行乘法、除法和幂运算，创建组合单位：
 
-@[code](/examples/util/quantity/unit_op.cpp)
+<!--@[code](/examples/util/quantity/unit_op.cpp) -->
 
 ### 数量（Quantity）
 
@@ -59,18 +59,18 @@ ast库提供了丰富的预定义单位，包括：
 
 #### 创建数量
 
-@[code](/examples/util/quantity/quantity_create.cpp)
+<!--@[code](/examples/util/quantity/quantity_create.cpp) -->
 
 #### 数量运算
 
 数量支持加法、减法、乘法和除法，但要求量纲兼容：
 
-@[code](/examples/util/quantity/quantity_op.cpp)
+<!--@[code](/examples/util/quantity/quantity_op.cpp) -->
 
 
 ## 量纲一致性检查
 
 系统会自动检查运算中的量纲一致性，防止物理上不合理的运算：
 
-@[code](/examples/util/quantity/quantity_op_invalid.cpp)
+<!--@[code](/examples/util/quantity/quantity_op_invalid.cpp) -->
 

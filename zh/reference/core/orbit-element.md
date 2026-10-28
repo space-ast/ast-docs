@@ -65,15 +65,15 @@ OrbitElement模块提供各种轨道根数（直角坐标、经典轨道根数�
 
 ### 1. 经典轨道根数与直角坐标转换
 
-@[code](/examples/core/orbitelement/convert_classical_scalar.cpp)
+<!--@[code](/examples/core/orbitelement/convert_classical_scalar.cpp) -->
 
 ### 2. 使用类引用版本的函数
 
-@[code](/examples/core/orbitelement/convert_classical_class.cpp)
+<!--@[code](/examples/core/orbitelement/convert_classical_class.cpp) -->
 
 ### 3. 不同轨道根数类型之间的转换
 
-@[code](/examples/core/orbitelement/convert_basic.cpp)
+<!--@[code](/examples/core/orbitelement/convert_basic.cpp) -->
 
 ## 依赖关系
 
@@ -93,4 +93,4 @@ OrbitElement模块提供各种轨道根数（直角坐标、经典轨道根数�
 
 ## API参考
 
-@[code](/src/AstCore/Orbit/OrbitElement.hpp)
+<!--@[code](/src/AstCore/Orbit/OrbitElement.hpp) -->

@@ -57,15 +57,15 @@ AST_CORE_API errc_t aJ2AnalyticalProp(double duration, double gm, double j2, dou
 
 ### 1. 位置速度传播
 
-@[code](/examples/propagator/j2_analytical/j2_position_velocity_prop.cpp)
+<!--@[code](/examples/propagator/j2_analytical/j2_position_velocity_prop.cpp) -->
 
 ### 2. 轨道根数传播
 
-@[code](/examples/propagator/j2_analytical/j2_orbital_elements_prop.cpp)
+<!--@[code](/examples/propagator/j2_analytical/j2_orbital_elements_prop.cpp) -->
 
 ### 3. 类接口使用
 
-@[code](/examples/propagator/j2_analytical/j2_class_interface.cpp)
+<!--@[code](/examples/propagator/j2_analytical/j2_class_interface.cpp) -->
 
 ## 精度与限制
 
@@ -97,4 +97,4 @@ AST_CORE_API errc_t aJ2AnalyticalProp(double duration, double gm, double j2, dou
 
 ## API参考
 
-@[code](/src/AstCore/Propagator/J2Analytical.hpp)
+<!--@[code](/src/AstCore/Propagator/J2Analytical.hpp) -->

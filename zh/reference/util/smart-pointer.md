@@ -28,7 +28,7 @@ ast 项目提供了三种智能指针实现，用于安全地管理对象生命�
 
 ### 使用示例
 
-@[code](/examples/util/smartpointer/sharedptr.cpp)
+<!--@[code](/examples/util/smartpointer/sharedptr.cpp) -->
 
 ## ScopedPtr
 
@@ -52,7 +52,7 @@ ast 项目提供了三种智能指针实现，用于安全地管理对象生命�
 
 ### 使用示例
 
-@[code](/examples/util/smartpointer/scopedptr.cpp)
+<!--@[code](/examples/util/smartpointer/scopedptr.cpp) -->
 
 ## WeakPtr
 
@@ -80,7 +80,7 @@ ast 项目提供了三种智能指针实现，用于安全地管理对象生命�
 
 ### 使用示例
 
-@[code](/examples/util/smartpointer/weakptr.cpp)
+<!--@[code](/examples/util/smartpointer/weakptr.cpp) -->
 
 ## 智能指针的使用建议
 

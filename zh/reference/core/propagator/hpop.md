@@ -70,15 +70,15 @@ struct HPOPForceModel
 
 ### 1. 基本轨道预报
 
-@[code](/examples/propagator/hpop/basic_propagation.cpp)
+<!--@[code](/examples/propagator/hpop/basic_propagation.cpp) -->
 
 ### 2. 高级力模型配置
 
-@[code](/examples/propagator/hpop/advanced_force_model.cpp)
+<!--@[code](/examples/propagator/hpop/advanced_force_model.cpp) -->
 
 ### 3. 多天轨道预报
 
-@[code](/examples/propagator/hpop/multi_day_propagation.cpp)
+<!--@[code](/examples/propagator/hpop/multi_day_propagation.cpp) -->
 
 ## 系统架构
 
@@ -158,4 +158,4 @@ HPOP基于一个类似Simulink的仿真引擎实现：
 
 ## API参考
 
-@[code](/src/AstCore/Propagator/HPOP/HPOP.hpp)
+<!--@[code](/src/AstCore/Propagator/HPOP/HPOP.hpp) -->
