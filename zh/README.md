@@ -12,7 +12,7 @@ actions:
     link: /zh/guide/quickstart.html
     type: primary
   - text: 模块参考
-    link: /zh/guide/
+    link: /zh/reference/
   - text: API 手册
     link: https://space-ast.github.io/ast/api/
   - text: GitHub
@@ -21,19 +21,19 @@ features:
   - title: 高精度轨道传播
     details: 二体、J2/J4 解析传播与 HPOP 数值传播，支持多种摄动力模型。
     icon: satellite
-    link: /zh/guide/core/propagator/
+    link: /zh/reference/core/propagator/
   - title: 完整的坐标与时间体系
     details: J2000/ECEF 变换链、儒略日与 UTC/TAI/TT 转换、JPL DE 与 SPK 星历读取。
     icon: clock
-    link: /zh/guide/core/time.html
+    link: /zh/reference/core/time.html
   - title: 姿态与数学基础
     details: 四元数、欧拉角、方向余弦矩阵，以及线性代数、ODE 积分与插值。
     icon: compass
-    link: /zh/guide/math/attitude.html
+    link: /zh/reference/math/attitude.html
   - title: 模块化共享库
     details: AstCore、AstMath、AstUtil 等独立模块按需链接，依赖关系清晰。
     icon: cubes
-    link: /zh/guide/util/
+    link: /zh/reference/util/
   - title: 跨平台构建
     details: 支持 Windows 与 Linux，兼容 C++11，可使用 xmake 或 CMake 集成。
     icon: laptop-code
@@ -45,6 +45,6 @@ features:
 
 ## 开始使用
 
-从 [快速入门](guide/quickstart.html) 获取发布包并完成第一个程序，或直接浏览 [模块参考](guide/) 与 [示例集](examples/)
+从 [快速上手](guide/quickstart.html) 获取发布包并完成第一个程序，或直接浏览 [模块参考](reference/) 与 [示例集](examples/)
 
 > SpaceAST（/æst/）专注于为航天任务分析提供可复用的算法组件

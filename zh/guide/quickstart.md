@@ -1,7 +1,7 @@
 ---
 order: 1
 ---
-# 快速入门
+# 快速上手
 
 ```component VPBanner
 title: 逐步教程
@@ -10,7 +10,7 @@ background: var(--bg-10)
 color: var(--banner-text)
 ```
 
-本教程将引导你下载 SpaceAST 的二进制发布包，并在自己的项目中使用它。
+本教程将引导你下载 SpaceAST 的二进制发布包，并编译运行第一个例子
 
 ## 环境要求
 
@@ -58,7 +58,7 @@ D:\SpaceAST
    - **链接器 → 常规 → 附加库目录**，添加 `D:\SpaceAST\lib`
    - **链接器 → 输入 → 附加依赖项**，添加 `AstCore.lib;AstUtil.lib;AstMath.lib`
    ::: tip
-   以上是 Release 模式的配置。如果要用 Debug 模式，先将属性页顶部的 **配置** 下拉框切换为 Debug，然后在附加依赖项中填入 `AstCoreD.lib;AstUtilD.lib;AstMathD.lib`（库名带 `D` 后缀）。
+   以上是 Release 模式的配置。如果要用 Debug 模式，先将属性页顶部的 **配置** 下拉框切换为 Debug，然后在附加依赖项中填入 `AstCore_d.lib;AstUtil_d.lib;AstMath_d.lib`（库名带 `_d` 后缀）。
    :::
 4. 将 `D:\SpaceAST\bin\` 下的所有 `.dll` 文件拷贝到输出目录。
     输出目录取决于你的项目配置，通常为 `D:\my_project\x64\Release\` 或 `D:\my_project\x64\Debug\`。
@@ -83,9 +83,9 @@ link_directories(${AST_HOME}/lib)
 
 add_executable(hello_ast hello_ast.cpp)
 
-# Debug 模式链接 D 后缀库；Release 链接不带 D
+# Debug 模式链接 _d 后缀库；Release 链接不带 _d
 target_link_libraries(hello_ast
-    debug     AstCoreD AstUtilD AstMathD
+    debug     AstCore_d AstUtil_d AstMath_d
     optimized AstCore AstUtil AstMath
 )
 ```
@@ -124,9 +124,9 @@ target("hello_ast")
     add_includedirs("../SpaceAST/include")
     add_linkdirs("../SpaceAST/lib")
 
-    -- 链接库（debug 模式库名带 D 后缀）
+    -- 链接库（debug 模式库名带 _d 后缀）
     if is_mode("debug") then
-        add_links("AstCoreD", "AstUtilD", "AstMathD")
+        add_links("AstCore_d", "AstUtil_d", "AstMath_d")
     else
         add_links("AstCore", "AstUtil", "AstMath")
     end
@@ -145,7 +145,7 @@ xmake run hello_ast
 :::
 
 ::: tip 提示
-- Debug 模式下库名带 `D` 后缀（如 `AstCoreD.dll`），Release 模式不带
+- Debug 模式下库名带 `_d` 后缀（如 `AstCore_d.dll`），Release 模式不带
 - 你的程序依赖哪些模块就链接哪些库：`AstCore`（动力学）、`AstMath`（数学）、`AstUtil`（工具）是最基础的三层
 - 运行前必须确保 DLL 在可执行文件同目录或 `PATH` 中
 :::
@@ -269,6 +269,6 @@ xmake run hello_ast
 
 恭喜！你已经成功运行了第一个 SpaceAST 程序。
 
-- 浏览 [examples/](../examples/) 了解更多示例代码
-- 阅读各模块的[技术文档](../technical/)深入了解具体功能
+- 浏览 [示例集](../examples/) 了解更多示例代码
+- 阅读 [模块参考](../reference/)了解各模块的具体功能
 - 查看 [API 手册](https://space-ast.github.io/ast/api/) 获取完整接口说明
