@@ -8,6 +8,9 @@ title: 逐步教程
 content: 本教程针对不熟悉 C++ 的新手。如果你已经有相关经验，可跳过该教程。
 background: var(--bg-10)
 color: var(--banner-text)
+actions:
+  - text: 开始学习
+    link: /zh/guide/quickstart.html#环境要求
 ```
 
 本教程将引导你下载 SpaceAST 的二进制发布包，并编译运行第一个例子
@@ -23,7 +26,7 @@ color: var(--banner-text)
 
 ## 下载
 
-前往 [GitHub Releases](https://github.com/space-ast/ast/releases) 页面，根据你的操作系统下载对应的二进制包。
+前往 [发布页面](https://gitcode.com/space-ast/ast/releases) ，根据你的操作系统下载对应的二进制包。
 
 ## Windows 下使用
 
@@ -271,4 +274,5 @@ xmake run hello_ast
 
 - 浏览 [示例集](../examples/) 了解更多示例代码
 - 阅读 [模块参考](../reference/)了解各模块的具体功能
+- 参阅 [从源码编译](build-from-source.md)，自己集成源码并编译
 - 查看 [API 手册](https://space-ast.github.io/ast/api/) 获取完整接口说明

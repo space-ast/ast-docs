@@ -15,8 +15,8 @@ actions:
     link: /zh/reference/
   - text: API 手册
     link: https://space-ast.github.io/ast/api/
-  - text: GitHub
-    link: https://github.com/space-ast/ast
+  - text: 下载
+    link: https://gitcode.com/space-ast/ast/releases/
 features:
   - title: 高精度轨道传播
     details: 二体、J2/J4 解析传播与 HPOP 数值传播，支持多种摄动力模型。
@@ -33,10 +33,11 @@ features:
   - title: 模块化共享库
     details: AstCore、AstMath、AstUtil 等独立模块按需链接，依赖关系清晰。
     icon: cubes
-    link: /zh/reference/util/
+    link: /zh/reference/
   - title: 跨平台构建
     details: 支持 Windows 与 Linux，兼容 C++11，可使用 xmake 或 CMake 集成。
     icon: laptop-code
+    link: /zh/guide/build-from-source.html
   - title: Python 绑定
     details: 通过 SWIG 暴露核心接口，便于脚本化验证与二次开发。
     icon: code
