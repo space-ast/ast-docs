@@ -9,34 +9,35 @@ heroImage: /hero.svg
 heroAlt: SpaceAST orbit and satellite illustration
 actions:
   - text: Get started
-    link: https://github.com/space-ast/ast#readme
+    link: /en/guide/quickstart.html
     type: primary
   - text: Module reference
-    link: /en/core/
+    link: /en/reference/
   - text: API reference
     link: https://space-ast.github.io/ast/api/
-  - text: GitHub
-    link: https://github.com/space-ast/ast
+  - text: Download
+    link: https://gitcode.com/space-ast/ast/releases/
 features:
   - title: High-precision orbit propagation
     details: Two-body, J2/J4 analytical and HPOP numerical propagation with configurable force models.
     icon: satellite
-    link: /en/core/propagator/
+    link: /en/reference/core/propagator/
   - title: Complete frames and time system
     details: J2000/ECEF transformation chains, Julian date and UTC/TAI/TT conversions, JPL DE and SPICE SPK ephemerides.
     icon: clock
-    link: /en/core/time.html
+    link: /en/reference/core/time.html
   - title: Attitude and math foundations
     details: Quaternions, Euler angles, DCMs, linear algebra, ODE integrators and interpolation.
     icon: compass
-    link: /en/math/attitude.html
+    link: /en/reference/math/attitude.html
   - title: Modular shared libraries
     details: AstCore, AstMath and AstUtil can be linked independently with clear dependencies.
     icon: cubes
-    link: https://github.com/space-ast/ast
+    link: /en/reference/
   - title: Cross-platform builds
     details: Windows and Linux, C++11, with xmake or CMake integration.
     icon: laptop-code
+    link: /en/guide/build-from-source.html
   - title: Python bindings
     details: SWIG-generated bindings for scripting, validation and rapid prototyping.
     icon: code
@@ -45,6 +46,6 @@ features:
 
 ## Getting started
 
-Get a release and build your first program from the [quick start](https://github.com/space-ast/ast#readme), or browse the [module reference](core/) and [examples](https://github.com/space-ast/ast/tree/master/examples)
+Get a release and build your first program from the [quick start](guide/quickstart.html), or browse the [module reference](reference/) and [examples](examples/)
 
 > SpaceAST (/æst/) provides reusable algorithm components for aerospace mission analysis
