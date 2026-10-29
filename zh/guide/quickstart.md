@@ -1,9 +1,10 @@
 ---
 order: 1
 ---
-# 快速上手
 
 <!-- 本文档已由维护者人工校对 -->
+
+# 快速上手
 
 ```component VPBanner
 title: 逐步教程
