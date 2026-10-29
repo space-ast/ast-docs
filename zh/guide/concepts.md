@@ -25,7 +25,7 @@ order: 2
 | AstSim | 航天器、地面站等仿真对象 | `ast/Spacecraft.hpp` |
 
 
-例如程序只做时间换算，只需要链接 `AstCore` 模块即可。具体库名和平台差异见[集成到现有工程](integration.md)。
+例如程序只做时间换算，则只需要链接 `AstCore` 模块，但在 linux 上链接时要把依赖链上的下层模块都加上。
 
 头文件可以统一通过 `ast/` 前缀引入
 

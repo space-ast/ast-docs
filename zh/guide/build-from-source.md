@@ -1,5 +1,5 @@
 ---
-order: 7
+order: 6
 ---
 
 <!-- 本文档已由维护者人工校对 -->
@@ -21,12 +21,17 @@ git clone https://gitcode.com/space-ast/ast.git  --depth=1
 
 ## 准备构建环境
 
+- 操作系统与 C++ 编译器，当前支持的编译环境如下：
 
-- 构建工具：[xmake](https://xmake.io/zh/guide/quick-start.html)，用于实现跨平台自动构建，请参考官方文档下载并安装
+| 平台 | 架构 | 编译器 |
+| --- | --- | --- |
+| Windows | x86 / x64 / ARM64 | MSVC（VS2015 及以上） |
+| Linux | x64 / ARM64 | GCC 5+ 或 Clang，glibc 2.28+ |
+| macOS | 暂不支持 | — |
 
-- C++编译器：支持 C++11 的编译器。Windows：[MSVC](https://visualstudio.microsoft.com/)（VS2015 及以上）；Linux：GCC 5+ 或 Clang
+- 构建工具 [xmake](https://xmake.io/zh/guide/quick-start.html)：用于实现跨平台自动构建，请参考官方文档下载并安装
 
-推荐使用 [xmake](https://xmake.io/) 作为构建工具，这也是本工程默认使用的构建工具。如果不想额外安装 xmake，请参考 [其他构建方式](#其他构建方式)
+推荐安装 [xmake](https://xmake.io/) 作为构建工具，这也是本工程默认使用的构建工具。如果不想额外安装 xmake，请参考 [其他构建方式](#其他构建方式)
 
 
 ## 配置
