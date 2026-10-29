@@ -3,6 +3,8 @@ order: 1
 ---
 # 快速上手
 
+<!-- 本文档已由维护者人工校对 -->
+
 ```component VPBanner
 title: 逐步教程
 content: 本教程针对不熟悉 C++ 的新手。如果你已经有相关经验，可跳过该教程。
@@ -272,7 +274,9 @@ xmake run hello_ast
 
 恭喜！你已经成功运行了第一个 SpaceAST 程序。
 
+- 阅读 [核心概念](concepts.md)，了解模块划分、命名约定和初始化
 - 浏览 [示例集](../examples/) 了解更多示例代码
 - 阅读 [模块参考](../reference/)了解各模块的具体功能
 - 参阅 [从源码编译](build-from-source.md)，自己集成源码并编译
+- 遇到报错时查 [常见问题排查](troubleshooting.md)
 - 查看 [API 手册](https://space-ast.github.io/ast/api/) 获取完整接口说明
