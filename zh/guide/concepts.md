@@ -10,7 +10,7 @@ order: 2
 
 ## 模块与依赖
 
-本工程按功能拆成多个模块，每个模块将生成一个共享库和一组头文件，您只需要链接需要用到的模块。
+本工程按功能拆成多个模块，每个模块将对应一个动态库和一组头文件，您可按需链接这些模块。
 
 核心模块：
 
@@ -27,14 +27,23 @@ order: 2
 
 例如程序只做时间换算，只需要链接 `AstCore` 模块即可。具体库名和平台差异见[集成到现有工程](integration.md)。
 
-头文件统一通过 `ast/` 前缀引入：
+头文件可以统一通过 `ast/` 前缀引入
 
 ```cpp
 #include "ast/TimePoint.hpp"
 #include "ast/HPOP.hpp"
 ```
 
-`include/ast/` 和 `include/AstCore/`、`include/AstMath/` 等目录下是同一批头文件的转发入口，两种写法都能编译，但推荐统一用 `ast/`。
+也可以按模块名称前缀引入
+
+```cpp
+#include "AstCore/TimePoint.hpp"
+#include "AstCore/HPOP.hpp"
+```
+
+::: info
+上面两种写法都是合法的，但推荐统一用 `ast/` 前缀，因为您不需要记住功能所在的模块名称，可以减少心智负担。
+:::
 
 ## 命名约定
 
@@ -47,7 +56,7 @@ order: 2
 | `k` | 常量 | `kPI`、`kDegToRad` |
 | `AST_`、`A_` | 宏 | `AST_USING_NAMESPACE`、`A_CXX_VERSION` |
 
-在源文件里用 `AST_USING_NAMESPACE` 引入命名空间，它默认展开为 `using namespace ast;`：
+在源文件里用 `AST_USING_NAMESPACE` 引入命名空间，它默认展开为 `using namespace ast;`
 
 ```cpp
 #include "ast/TimePoint.hpp"
@@ -77,11 +86,13 @@ int main()
 
 ## 错误处理
 
-库的接口以**错误码**为主，不依赖异常表达业务错误。
+库的接口以**错误码**为主，不依赖 C++ 异常表达错误。
 
-函数的返回值类型是 `errc_t`（其定义为`int`的别名），值为 `0` (`eNoError`)表示成功，其余取值表示错误：
+函数的返回值类型是 `errc_t`（其定义为`int`的别名）。
 
-```cpp
+值为 `0` (`eNoError`)表示成功，其余取值表示错误：
+
+```cpp{16,17}
 #include "ast/TwoBody.hpp"
 #include "ast/Vector.hpp"
 #include "ast/Constants.hpp"
@@ -112,11 +123,11 @@ int main()
 
 ## 对象与内存
 
-库里的类型大致分两类：
+本工程里的类型大致分两类：
 
-- **值类型**：`TimePoint`、`JulianDate`、`Vector3d`、`Matrix3d`、`OrbElem` 等。直接按值创建、拷贝和返回，生命周期由作用域决定，不需要手动释放。
+- **值类型**：`TimePoint`、`JulianDate`、`DateTime`、`Vector3d`、`Matrix3d` 等。直接按值创建、拷贝和返回，生命周期由其所在作用域决定，不需要手动释放。
 
-- **对象类型**：坐标系、星历点、航天器、天体等继承自 `Object` 的类型。其使用引用计数管理生命周期，需要配合库提供的智能指针使用：
+- **对象类型**：坐标系、星历点、航天器、天体等继承自 `Object` 的类型，其使用引用计数管理生命周期，需要配合库提供的智能指针使用：
   - `SharedPtr<T>`：共享所有权，最后一个引用释放时销毁对象，类似 `std::shared_ptr` ；
   - `WeakPtr<T>`：不增加引用计数，用于观察已被 `SharedPtr` 管理的对象，类似 `std::weak_ptr` 。
 
@@ -126,7 +137,7 @@ int main()
 
 ## 初始化
 
-涉及时间系统、地固系、星历、重力场或大气模型时，需要初始化运行时数据。
+涉及地球指向、星历、重力场或大气模型时，需要初始化所需的运行时数据。
 
 一般情况下，本工程会在相关功能被使用时自动初始化运行时数据，您也可以手动调用 `aInitialize()` 显式初始化：
 
@@ -148,5 +159,7 @@ int main()
 }
 ```
 
-只做纯数学运算（向量、矩阵、二体传播、轨道根数换算）时不必调用 `aInitialize()`。初始化具体加载哪些数据、数据放在哪里，见[数据与运行时](data-and-runtime.md)。
+只做纯数学运算（向量、矩阵、二体传播、轨道根数换算）时不必调用 `aInitialize()`。
+
+关于初始化具体加载哪些数据、数据的位置，请参考[数据与运行时](data-and-runtime.md)。
 
