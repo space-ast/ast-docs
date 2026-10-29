@@ -1,4 +1,4 @@
-﻿// 本文件为 zh/examples/ephemeris/load_ephemeris_de.md 中的完整代码
+﻿// 本文件为 zh/examples/ephemeris/load-ephemeris-de.md 中的完整代码
 
 #include "ast/JplDe.hpp"
 #include "ast/TimePoint.hpp"

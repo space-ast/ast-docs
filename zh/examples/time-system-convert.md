@@ -18,10 +18,3 @@ UT1 = UTC + DUT1    (地球自转修正, |DUT1|<0.9s)
 
 <!--@[code](time-system-convert.cpp) -->
 
-## 注意事项
-
-- TimePoint 内部以 TAI 为基准存储，各系统转换通过偏移量实现
-- UTC ↔ TAI 转换依赖闰秒表，库内置了截至 2016 年底的闰秒数据
-- TDB ↔ TT 的周期项计算基于解析公式，幅度约 1.6ms
-- JulianDate 用 (int day, double second) 保证精度，避免单 double 的舍入误差
-- 长时间跨度建议用 TimePoint 而非 DateTime，精度更高

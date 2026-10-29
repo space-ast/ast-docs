@@ -3,7 +3,7 @@
 该示例展示如何读取 SPICE SPK 二进制星历文件（`.bsp`），并获取星历时间区间、文件中的天体列表与天体位置速度。
 
 ::: tip
-本示例依赖 CSPICE 动态库，首次调用时会自动加载该库；如果运行时报`SPICE 库未加载`，请检查 `AstCore` 动态库所在目录是否存在 cspice 库。[发布的二进制包](https://gitcode.com/space-ast/ast/releases)里有预编译的 cspice 库，可以直接使用。
+本示例依赖 CSPICE 动态库，首次调用时会自动加载该库；如果运行时报 `SPICE 库未加载`，请确认 cspice 库位于程序搜索路径（例如可执行文件所在目录），或通过启动配置中的 `CSPICE_LIBS` 指定库路径。[发布的二进制包](https://gitcode.com/space-ast/ast/releases)里有预编译的 cspice 库，可以直接使用。
 :::
 
 ## 引入头文件
@@ -18,7 +18,7 @@
 #include "ast/TimeInterval.hpp"
 #include "ast/Vector.hpp"
 #include <iostream>
-#include <locale>
+#include <clocale>
 #include <string>
 #include <vector>
 
@@ -87,7 +87,7 @@ SPK文件使用NAIF ID标识天体，常用的ID与其对应的天体如下:
 - 999: 冥王星
 
 其中 `xxx系质心` 表示考虑了行星的卫星（例如火卫一）后整个行星系统的质心。
-个位数（0-9）通常代表行星系统的质心，而三位数（x99）则通常代表行星本体。
+个位数（1-9）通常代表行星系统的质心，而三位数（x99）则通常代表行星本体。
 :::
 
 ## 获取星历文件中的天体列表

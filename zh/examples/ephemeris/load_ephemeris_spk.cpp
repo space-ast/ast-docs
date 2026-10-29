@@ -1,11 +1,11 @@
-﻿// 本文件为 zh/examples/ephemeris/load_ephemeris_spk.md 中的完整代码
+﻿// 本文件为 zh/examples/ephemeris/load-ephemeris-spk.md 中的完整代码
 
 #include "ast/JplSpk.hpp"
 #include "ast/TimePoint.hpp"
 #include "ast/TimeInterval.hpp"
 #include "ast/Vector.hpp"
 #include <iostream>
-#include <locale>
+#include <clocale>
 #include <string>
 #include <vector>
 
